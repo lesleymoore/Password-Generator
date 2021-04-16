@@ -79,13 +79,11 @@ function writePassword() {
         retVal += charset.charAt(Math.floor(Math.random() * n));  
         }
       }
-      else
-      { alert("Try Again")}
+      //else
+     // { alert("Try Again")}
 
         return retVal
-      
       }
-
     } }
    
   
