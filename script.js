@@ -25,7 +25,24 @@ function writePassword() {
     } 
      return retVal
     } else {
-     alert("Try Again")
+     var up = prompt("Do you want to include Uppercase letters?")
+     if (up == "yes") {
+       var number = prompt("Do you want to include numbers?")
+       if (number == "yes")
+       var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
+       if (gnum > 7 && gnum < 129) {
+        var length = gnum,
+       charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+        retVal = "";
+        for (var i =0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));  
+        }
+      }
+      return retVal
+      } else {
+       alert("Try again")
+     }
+
     } }
    
   
