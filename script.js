@@ -7,88 +7,103 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   
   function generatePassword() {
-    //YYY
+    //YYYY
     var answer = prompt("Do you want to inlcude lowercase letters?")
      if (answer == "yes") {
       var up = prompt("Do you want to inlcude Uppercase letters?")
       if (up == "yes") {
         var number = prompt("Do you want to inlcude numbers?")
         if (number == "yes") {
+        var special = prompt("Do you want to include special characters?")
+        if (special == "yes") {
         var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
       if (gnum > 7 && gnum < 129) {
       var length = gnum,
-     charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+     charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()",
       retVal = "";
       for (var i =0, n = charset.length; i < length; ++i) {
       retVal += charset.charAt(Math.floor(Math.random() * n));  
-      }}
+      }}}
     } 
     return retVal
-    //YNY
+    //YNYY
     } else {
       var number = prompt("Do you want to inlcude numbers?")
       if (number == "yes") {
+        var special = prompt("Do you want to include special characters?")
+        if (special == "yes"){
         var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
         if (gnum > 7 && gnum < 129) {
           var length = gnum,
-         charset = "abcdefghijklmnopqrstuvwxyz0123456789",
+         charset = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()",
           retVal = "";
           for (var i =0, n = charset.length; i < length; ++i) {
           retVal += charset.charAt(Math.floor(Math.random() * n));  
-          }
+          }}
+          return retVal
       }
-   //YNN
+   //YNNY
     } else{
+      var special = prompt("Do you want to include special characters?")
+      if(special == "yes") {
       var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
       if (gnum > 7 && gnum < 129) {
         var length = gnum,
-       charset = "abcdefghijklmnopqrstuvwxyz",
+       charset = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()",
         retVal = "";
         for (var i =0, n = charset.length; i < length; ++i) {
         retVal += charset.charAt(Math.floor(Math.random() * n));  
-        }
+        }}
     }
     }}
      return retVal
-     //NYY
+     //NYYY
     } else {
      var up = prompt("Do you want to include Uppercase letters?")
      if (up == "yes") {
        var number = prompt("Do you want to include numbers?")
        if (number == "yes") {
+       var special = prompt("Do you want to inlcude special characters?")
+       if (special == "yes") {
        var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
        if (gnum > 7 && gnum < 129) {
         var length = gnum,
-       charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+       charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()",
         retVal = "";
         for (var i =0, n = charset.length; i < length; ++i) {
         retVal += charset.charAt(Math.floor(Math.random() * n));  
-        }
+        }}
       }} else {
-        if(number == "no")
+        //NYNY
+        if(number == "no") {
+        var special = prompt("Do you want to add special charcters?")
+        if(special == "yes"){
         var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
         if (gnum > 7 && gnum < 129) {
          var length = gnum,
-        charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()",
          retVal = "";
          for (var i =0, n = charset.length; i < length; ++i) {
          retVal += charset.charAt(Math.floor(Math.random() * n));  
-         }
+         }}}
       }}
       return retVal
-      //NNY
+      //NNYY
       } else {
        var number = prompt("Do you want to include numbers?")
-       if(number == "yes")
+       if(number == "yes") {
+       var special = prompt("Do you want to include special characters?")
+       if(special == "yes") {
        var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
        if (gnum > 7 && gnum < 129) {
         var length = gnum,
-       charset = "0123456789",
+       charset = "0123456789!@#$%^&*()",
         retVal = "";
         for (var i =0, n = charset.length; i < length; ++i) {
         retVal += charset.charAt(Math.floor(Math.random() * n));  
-        }
-      }
+        }}
+        return retVal
+      }}
       else
       { alert("Try Again")}
 
