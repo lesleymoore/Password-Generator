@@ -8,13 +8,13 @@ function writePassword() {
   
   function generatePassword() {
     //YYYY
-    var answer = prompt("Do you want to include lowercase letters?")
+    var answer = prompt("Do you want to include lowercase letters? Type yes or no")
      if (answer == "yes") {
-      var up = prompt("Do you want to inlcude Uppercase letters?")
+      var up = prompt("Do you want to inlcude Uppercase letters? Type yes or no")
       if (up == "yes") {
-        var number = prompt("Do you want to include numbers?")
+        var number = prompt("Do you want to include numbers? Type yes or no")
         if (number == "yes") {
-        var special = prompt("Do you want to include special characters?")
+        var special = prompt("Do you want to include special characters? Type yes or no")
         if (special == "yes") {
         var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
       if (gnum > 7 && gnum < 129) {
@@ -25,7 +25,7 @@ function writePassword() {
         retVal += charset.charAt(Math.floor(Math.random() * n));  
         }}}
     } else{
-      var special = prompt("Do you want to include special characters?")
+      var special = prompt("Do you want to include special characters? Type yes or no")
       if (special == "yes") {
       var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
     if (gnum > 7 && gnum < 129) {
@@ -49,9 +49,9 @@ function writePassword() {
     return retVal
     //YNYY
     } else {
-      var number = prompt("Do you want to include numbers?")
+      var number = prompt("Do you want to include numbers? Type yes or no")
       if (number == "yes") {
-        var special = prompt("Do you want to include special characters?")
+        var special = prompt("Do you want to include special characters? Type yes or no")
         if (special == "yes"){
         var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
         if (gnum > 7 && gnum < 129) {
@@ -76,7 +76,7 @@ function writePassword() {
        }
    //YNNY
     } else{
-      var special = prompt("Do you want to include special characters?")
+      var special = prompt("Do you want to include special characters? Type yes or no")
       if(special == "yes") {
       var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
       if (gnum > 7 && gnum < 129) {
@@ -101,11 +101,11 @@ function writePassword() {
      return retVal
      //NYYY
     } else {
-     var up = prompt("Do you want to include Uppercase letters?")
+     var up = prompt("Do you want to include Uppercase letters? Type yes or no")
      if (up == "yes") {
-       var number = prompt("Do you want to include numbers?")
+       var number = prompt("Do you want to include numbers? Type yes or no")
        if (number == "yes") {
-       var special = prompt("Do you want to inlcude special characters?")
+       var special = prompt("Do you want to inlcude special characters? Type yes or no")
        if (special == "yes") {
        var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
        if (gnum > 7 && gnum < 129) {
@@ -128,7 +128,7 @@ function writePassword() {
     } else {
         //NYNY
         if(number == "no") {
-        var special = prompt("Do you want to include special charcters?")
+        var special = prompt("Do you want to include special charcters? Type yes or no")
         if(special == "yes"){
         var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
         if (gnum > 7 && gnum < 129) {
@@ -152,9 +152,9 @@ function writePassword() {
       return retVal
       //NNYY
       } else {
-       var number = prompt("Do you want to include numbers?")
+       var number = prompt("Do you want to include numbers? Type yes or no")
        if(number == "yes") {
-       var special = prompt("Do you want to include special characters?")
+       var special = prompt("Do you want to include special characters? Type yes or no")
        if(special == "yes") {
        var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
        if (gnum > 7 && gnum < 129) {
@@ -179,7 +179,7 @@ function writePassword() {
       }
     } //NNNY
       else {
-        var special = prompt("Do you want to include special characters?")
+        var special = prompt("Do you want to include special characters? Type yes or no")
         if(special=="yes") {
           var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
           if (gnum > 7 && gnum < 129) {
