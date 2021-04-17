@@ -8,11 +8,11 @@ function writePassword() {
   
   function generatePassword() {
     //YYYY
-    var answer = prompt("Do you want to inlcude lowercase letters?")
+    var answer = prompt("Do you want to include lowercase letters?")
      if (answer == "yes") {
       var up = prompt("Do you want to inlcude Uppercase letters?")
       if (up == "yes") {
-        var number = prompt("Do you want to inlcude numbers?")
+        var number = prompt("Do you want to include numbers?")
         if (number == "yes") {
         var special = prompt("Do you want to include special characters?")
         if (special == "yes") {
@@ -22,13 +22,34 @@ function writePassword() {
      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()",
       retVal = "";
       for (var i =0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));  
+        }}}
+    } else{
+      var special = prompt("Do you want to include special characters?")
+      if (special == "yes") {
+      var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
+    if (gnum > 7 && gnum < 129) {
+    var length = gnum,
+   charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()",
+    retVal = "";
+    for (var i =0, n = charset.length; i < length; ++i) {
       retVal += charset.charAt(Math.floor(Math.random() * n));  
       }}}
-    } 
+      else {
+        var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
+    if (gnum > 7 && gnum < 129) {
+    var length = gnum,
+   charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+    retVal = "";
+    for (var i =0, n = charset.length; i < length; ++i) {
+      retVal += charset.charAt(Math.floor(Math.random() * n));  
+      }}
+      }
+    }
     return retVal
     //YNYY
     } else {
-      var number = prompt("Do you want to inlcude numbers?")
+      var number = prompt("Do you want to include numbers?")
       if (number == "yes") {
         var special = prompt("Do you want to include special characters?")
         if (special == "yes"){
@@ -41,8 +62,18 @@ function writePassword() {
           retVal += charset.charAt(Math.floor(Math.random() * n));  
           }}
           return retVal
-       //YNYN not putting out password
-        } 
+       //YNYN 
+        } else {
+          var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
+        if (gnum > 7 && gnum < 129) {
+          var length = gnum,
+         charset = "abcdefghijklmnopqrstuvwxyz0123456789",
+          retVal = "";
+          for (var i =0, n = charset.length; i < length; ++i) {
+          retVal += charset.charAt(Math.floor(Math.random() * n));  
+          }}
+          return retVal
+       }
    //YNNY
     } else{
       var special = prompt("Do you want to include special characters?")
@@ -51,6 +82,16 @@ function writePassword() {
       if (gnum > 7 && gnum < 129) {
         var length = gnum,
        charset = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()",
+        retVal = "";
+        for (var i =0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));  
+        }}
+    } //YNNN
+     else {
+      var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
+      if (gnum > 7 && gnum < 129) {
+        var length = gnum,
+       charset = "abcdefghijklmnopqrstuvwxyz",
         retVal = "";
         for (var i =0, n = charset.length; i < length; ++i) {
         retVal += charset.charAt(Math.floor(Math.random() * n));  
@@ -73,11 +114,21 @@ function writePassword() {
         retVal = "";
         for (var i =0, n = charset.length; i < length; ++i) {
         retVal += charset.charAt(Math.floor(Math.random() * n));  
-        }}
-      }} else {
+        }} //NYYN
+      } else {
+        var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
+        if (gnum > 7 && gnum < 129) {
+         var length = gnum,
+        charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+         retVal = "";
+         for (var i =0, n = charset.length; i < length; ++i) {
+         retVal += charset.charAt(Math.floor(Math.random() * n));  
+         }}
+      }
+    } else {
         //NYNY
         if(number == "no") {
-        var special = prompt("Do you want to add special charcters?")
+        var special = prompt("Do you want to include special charcters?")
         if(special == "yes"){
         var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
         if (gnum > 7 && gnum < 129) {
@@ -86,7 +137,17 @@ function writePassword() {
          retVal = "";
          for (var i =0, n = charset.length; i < length; ++i) {
          retVal += charset.charAt(Math.floor(Math.random() * n));  
-         }}}
+         }}} //NYNN
+        else{
+          var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
+        if (gnum > 7 && gnum < 129) {
+         var length = gnum,
+        charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+         retVal = "";
+         for (var i =0, n = charset.length; i < length; ++i) {
+         retVal += charset.charAt(Math.floor(Math.random() * n));  
+         }}
+        } 
       }}
       return retVal
       //NNYY
@@ -104,7 +165,19 @@ function writePassword() {
         retVal += charset.charAt(Math.floor(Math.random() * n));  
         }}
         return retVal
-      }} //NNNY
+      } //NNYN
+      else {
+        var gnum = prompt("How many characters would you like your password to have? Choose 8-128")
+       if (gnum > 7 && gnum < 129) {
+        var length = gnum,
+       charset = "0123456789",
+        retVal = "";
+        for (var i =0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));  
+        }}
+        return retVal
+      }
+    } //NNNY
       else {
         var special = prompt("Do you want to include special characters?")
         if(special=="yes") {
